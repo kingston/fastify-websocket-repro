@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <title>Websocket Demo</title>
+    <script type="text/javascript">
+      const ipv4 = new WebSocket("ws://127.0.0.1:3000");
+      ipv4.onopen = () => {
+        ipv4.send("Hello!");
+      };
+      const ipv6 = new WebSocket("ws://[::1]:3000");
+      ipv6.onopen = () => {
+        ipv6.send("Hello!");
+      };
+    </script>
+  </head>
+  <body>
+    <h1>Connects to websocket</h1>
+  </body>
+</html>
